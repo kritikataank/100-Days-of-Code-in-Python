@@ -1,0 +1,44 @@
+from GameData import data
+import random
+import os 
+clear = lambda:os.system('cls')
+
+def format(choice):
+    Name = choice['name']
+    follower_count = choice['follower_count']
+    description = choice['description']
+    country = choice['country']
+    return f"{Name}, a {description}, from {country}."
+
+def correct_answer(a, b):
+    if a > b:
+        return "A"
+    else:
+        return "B"
+
+B = random.choice(data)
+flag = 1
+score = 0
+
+while flag == 1:
+    A = B
+    B = random.choice(data)
+
+    while A == B:
+        B = random.choice(data)
+    print (f"Compare A: {format(A)}")
+    print (f"Against B: {format(B)}")
+
+    user_choice = input("Who has more followers? Type A or B: ")
+    follower_a = A['follower_count']
+    follower_b = B['follower_count']
+    if user_choice == correct_answer(follower_a, follower_a):
+        score += 1
+        flag = 1
+        clear()
+        print(f"You're right! Current score = {score}")
+    else:
+        flag = 0
+        clear()
+        print(f"Sorry, that's wrong, final score = {score}") 
+
