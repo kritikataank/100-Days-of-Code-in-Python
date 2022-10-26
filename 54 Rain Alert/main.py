@@ -1,10 +1,10 @@
 import requests
 
-api_key ="84034078282690f744d90f9e088dddda"
+api_key ="your API key"
 parameters ={
     "lat": 12.971599,
     "lon": 77.594566,
-    "appid": "cd8a27d068ae70604d5d67b70d974b89",
+    "appid": "your API ID",
 }
 
 response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params=parameters)
