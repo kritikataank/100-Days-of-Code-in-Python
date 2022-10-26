@@ -3,8 +3,8 @@ from twillio.rest import Client
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-STOCK_API_KEY = "MV8J8CLG1S58MIAJ"
-NEWS_API_KEY = "1f7794c3a82f42178916568ed248f285"
+STOCK_API_KEY = "your API key"
+NEWS_API_KEY = "your API key"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
